@@ -1,0 +1,10 @@
+[submodule "peachpie-phpunit"]
+	path = peachpie-phpunit
+	url = https://github.com/roberthusak/peachpie-phpunit.git
+[submodule "wpdotnet-sdk"]
+	path = wpdotnet-sdk
+	url = https://github.com/iolevel/wpdotnet-sdk.git
+[submodule "wordpress-develop"]
+	path = wordpress-develop
+	url = https://github.com/roberthusak/wordpress-develop.git
+	branch = peachpie
