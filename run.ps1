@@ -1,7 +1,7 @@
 $dbContainer = "wptest-db"
 
 # Run MySQL using Docker
-& docker run --name $dbContainer --detach --rm --expose 3306:3306 wordpress-db:latest
+& docker run --name $dbContainer --detach --rm -p 3306:3306 wordpress-db:latest
 
 # Wait for MySQL to initialize
 Start-Sleep -s 15
