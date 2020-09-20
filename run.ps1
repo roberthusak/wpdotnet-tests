@@ -7,7 +7,7 @@ $dbContainer = "wptest-db"
 Start-Sleep -s 15
 
 # Run tests
-& dotnet test ./wordpress-develop/PeachPied.WordPress.Tests.msbuildproj --no-build
+& dotnet test ./wordpress-develop/PeachPied.WordPress.Tests.msbuildproj --no-build --logger trx
 
 # Stop MySQL
 & docker stop -t 3 $dbContainer
