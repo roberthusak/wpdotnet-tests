@@ -7,10 +7,7 @@ $dbContainer = "wptest-db"
 Start-Sleep -s 15
 
 # Run tests
-Push-Location ./wordpress-develop
-$env:WP_TESTS_SKIP_INSTALL = '1'
-& dotnet phpunit --no-build
-Pop-Location
+& dotnet test ./wordpress-develop/PeachPied.WordPress.Tests.msbuildproj --no-build
 
 # Stop MySQL
 & docker stop -t 3 $dbContainer

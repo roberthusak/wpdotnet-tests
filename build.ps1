@@ -3,10 +3,7 @@ Remove-Item ./peachpie-phpunit/global.json -ErrorAction Ignore
 Remove-Item ./wpdotnet-sdk/global.json -ErrorAction Ignore
 
 # Build dotnet-phpunit of version 7.5.9 - explicitly supported by WordPress tests (unlike newer versions)
-& dotnet build ./peachpie-phpunit/src/dotnet-phpunit/dotnet-phpunit.csproj /p:PhpUnitVersion=7.5.9
-
-# Install dotnet-phpunit per the manifest
-& dotnet tool restore
+& dotnet build ./peachpie-phpunit/src/Peachpied.PhpUnit.TestAdapter/Peachpied.PhpUnit.TestAdapter.csproj /p:PhpUnitVersion=7.5.9
 
 # Build WordPress and its tests
 & dotnet build ./wordpress-develop/PeachPied.WordPress.Tests.msbuildproj
